@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Members_join";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Members_join";
+}
+
+
+<style>
+    .joinbox {
+        width: 48%;
+        padding: 108px;
+        border-radius: 8px;
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        margin: 0 auto;
+        background-color: rgb(249, 248, 248);
+        box-shadow: 6px 6px 6px 2px gray;
+    }
+
+    .f-name, .f-id, .f-tel, .f-address, .f-pass {
+        font-size: 18px;
+        width: 143%;
+        padding: 10px 8px;
+        border: 2px solid lightgray;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    .btn-join {
+        border: none;
+        background-color: orange;
+        padding: 5px;
+        width: 70%;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+        .btn-join:hover {
+            background-color: rgb(240, 160, 13);
+        }
+
+    .joinbox h3 span {
+        display: block;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #3e3d3d;
+        font-weight: 200;
+    }
+</style>
+<br />
+<br />
+
+<div class="container-md">
+    <h2 class="text-success text-center">會員專區</h2>
+    <div class="joinbox">
+        <h3>會員註冊<span>Register</span></h3>
+        <form id="registerForm" action="/Home/Members_join" method="post" class="login-form">
+            @Html.AntiForgeryToken()
+            <fieldset>
+                <label class="input">
+                    <input type="text" id="Name" name="Name" class="form-control f-name" required placeholder="請輸入姓名" minlength="2" maxlength="5">
+                </label>
+                <br>
+                <label class="input">
+                    <input type="email" id="Email" name="Email" class="form-control f-id" required placeholder="請輸入您的e-mail信箱">
+                    <p style="color:red"> @ViewBag.DuplicateMessage</p>
+                </label>
+               <br />
+               
+                <label class="input">
+                    <input type="tel" id="Phone" name="Phone" class="form-control f-tel" required placeholder="請輸入電話">
+                </label>
+                <br>
+                <label class="input">
+                    <input type="text" id="Address" name="Address" class="form-control f-address" required placeholder="請輸入地址" minlength="5">
+                </label>
+                <br>
+                <label class="input">
+                    <input type="password" id="Pwd" name="Pwd" class="form-control f-pass" required minlength="8" maxlength="20" pattern="^(?=.*\d)(?=.*[a-zA-Z]).{8,20}$" placeholder="請輸入8-20個數字及字母密碼">
+                </label>
+                <br>
+                <button class="btn btn-join clearfix" type="submit">加入會員</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <script>
+        var message = '@Html.Raw(TempData["SuccessMessage"])';
+        alert(message);
+        window.location.href = "/Home/Members_Information"; 
+    </script>
+}
+
+
+
+
+

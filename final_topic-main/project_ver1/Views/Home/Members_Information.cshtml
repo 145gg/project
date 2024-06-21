@@ -1,0 +1,115 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Members_Information";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Members_Information";
+}
+
+
+
+
+<style>
+    
+   
+    .mb-box {
+        width: 55%;
+        padding: 120px;
+        border-radius: 15px;
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        margin: 0 auto;
+        background-color: rgba(222, 237, 240, 0.953);
+        box-shadow: 6px 6px 6px 2px gray;
+        
+    }
+
+    .logout {
+        text-decoration: none;
+        border: none;
+        background-color: rgba(255, 0, 0, 0.87);
+        padding: 5px;
+        width: 35%;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .order {
+        position:relative;
+        top:-150px;
+        left:40px;
+        text-decoration: none;
+        border: none;
+        padding: 5px;
+        width: 15%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        color: whitesmoke;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+        .order:hover {
+            background-color: gray;
+        }
+
+
+</style>
+
+
+<div class="container-md">
+   <div class="mb-box">
+        <h3 class="text-center" style="font-weight:bold;">
+            會員資料
+        </h3>
+    <br>
+    <dl class="row ">
+        <dt  class=" col-md-2  fs-4">
+            姓名
+        </dt>
+        <dd id="" class=" col-md-10 fs-5">
+                @Model.Name
+        </dd>
+        <dt class="col-md-2 fs-4">
+            信箱
+        </dt>
+        <dd id="" class="col-md-10 fs-5">
+                @Model.Email
+        </dd>
+        <dt id="" class="col-md-2 fs-4">
+            電話
+        </dt>
+        <dd class="col-md-10 fs-5">
+                @Model.Phone
+        </dd>
+        <dt class="col-md-2 fs-4">
+            地址
+        </dt>
+        <dd class="col-md-10 fs-5">
+                @Model.Address
+        </dd>
+            
+        </dl>
+        <br>
+        
+        <a class=" btn btn-dark btn btn-secondary btn-lg" asp-action="Order">查看訂單</a>
+
+        <br>
+        <br>
+        <a class=" btn btn-success btn  btn-lg" asp-action="CustomerEdit">修改會員資料</a>
+
+       
+        <br>
+        <br>
+        <form id="logoutForm" asp-action="Logout" asp-controller="Home" method="post">
+            <button type="submit" class="logout btn  btn-danger">登出</button>
+        </form>
+  
+    </div>
+
+  
+</div>
+

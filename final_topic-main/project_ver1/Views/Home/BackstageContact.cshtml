@@ -1,0 +1,257 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Backstage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Backstage";
+}
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<style>
+    .mb-box {
+        width: 55%;
+        padding: 120px;
+        border-radius: 15px;
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        margin: 0 auto;
+        background-color: rgba(222, 237, 240, 0.953);
+        box-shadow: 6px 6px 6px 2px gray;
+    }
+
+    .logout {
+        text-decoration: none;
+        border: none;
+        background-color: rgba(255, 0, 0, 0.87);
+        padding: 5px;
+        width: 35%;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .order {
+        position: relative;
+        top: -150px;
+        left: 40px;
+        text-decoration: none;
+        border: none;
+        padding: 5px;
+        width: 15%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        color: whitesmoke;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .order:hover {
+        background-color: gray;
+    }
+
+    .logout {
+        text-decoration: none;
+        border: none;
+        background-color: rgba(255, 0, 0, 0.87);
+        padding: 5px;
+        width: 35%;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .order_F {
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        padding: 5px;
+    }
+
+    .order_R {
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        padding: 5px;
+    }
+
+    .T-title:hover {
+        background-color: black;
+    }
+
+    .btn-custom {
+        background-color: #1B813E;
+        border-color: #1B813E;
+    }
+
+    .btn-custom:hover {
+        background-color: #7BA23F;
+        border-color: #7BA23F;
+    }
+
+    .sidebar {
+        width: 250px;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        height: 400px;
+        background-color: #f8f9fa;
+        border-right: 1px solid #dee2e6;
+        padding-top: 20px;
+    }
+
+    .sidebar a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #333;
+        display: block;
+    }
+
+    .sidebar a:hover {
+        background-color: #ddd;
+    }
+
+    /* 捲軸 */
+    .table-container {
+        max-height: 500px; 
+        overflow-y: auto; 
+    }
+
+        .table-container table {
+            table-layout: fixed;
+        }
+
+        .table-container td {
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+</style>
+
+<div class="container-md">
+    <div class="sidebar">
+        <a href="@Url.Action("Backstage", "Home")">員工主頁</a>
+        <a href="@Url.Action("BackstageContact", "Home")">顧客問題</a>
+        <a href="@Url.Action("Index", "Home")">產品訂單</a>
+        <a href="@Url.Action("News", "Home")">訂房訂單</a>
+        <a href="@Url.Action("Index", "Home")">會員資料管理</a>
+        <br />
+        <br />
+        <form id="logoutForm" asp-action="Logout" asp-controller="Home" method="post">
+            <button type="submit" class="logout btn  btn-danger">登出</button>
+        </form>
+
+    </div>
+    <h1 class="text-center">顧客問題</h1>
+    <select id="filterSelect">
+        <option value="all">所有問題</option>
+        <option value="unanswered">尚未回覆</option>
+        <option value="answered">已回覆</option>
+    </select>
+    <br />
+    <br />
+    <div class="table-container"> 
+        <table class="table table-hover order_R" style="background-color:white;">
+            @if (Model.Count > 0)
+            {
+                <thead class=" table table-dark">
+                    <tr>
+                        <th>顧客姓名</th>
+                        <th>顧客性別</th>
+                        <th>顧客電話</th>
+                        <th>問題分類</th>
+                        <th>問題內容</th>
+                        <th>提交時間</th>
+                        <th>回覆狀態</th>
+                        <th>聯繫顧客</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var contact in Model)
+                    {
+                        <tr>
+                            <td>@contact.Name</td>
+                            <td>
+                                @{
+                                    if (contact.Sex)
+                                    {
+                                        @:男
+                                    }
+                                    else
+                                    {
+                                        @:女
+                                    }
+                                }
+                            </td>
+                            <td>@contact.Phone</td>
+                            <td>@contact.QuestionCategory</td>
+                            <td>@contact.QuestionContent</td>
+                            <td>@contact.SetTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                            <td>
+
+                                <p class="@(contact.Finished ? "text-success" : "text-danger")">
+                                    @(contact.Finished ? "已回覆" : "尚未回覆")
+                                </p>
+                            </td>
+                            <td>
+                                @if (!contact.Finished)
+                                {
+                                    <form asp-action="ContactEdit" asp-controller="Home" method="post">
+                                        <input type="hidden" name="contactId" value="@contact.ID" />
+                                        <button type="submit" class="btn btn-primary btn-custom">完成</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <p>已聯繫</p>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            }
+            else
+            {
+                <tbody>
+                    <tr>
+                        <td colspan="8">
+                            <h1 style="text-align:center; color:darkolivegreen">所有問題皆已回覆</h1>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+
+   @*  <form id="logoutForm" asp-action="Logout" asp-controller="Home" method="post">
+        <button type="submit" class="logout btn  btn-danger">登出</button>
+    </form> *@
+
+</div>
+<script>
+    $(document).ready(function () {
+        
+        $('#filterSelect').change(function () {
+            var selectedValue = $(this).val();
+         
+            if (selectedValue === "unanswered") {
+                $('.table-container table tbody tr').each(function () {
+                    if ($(this).find('td:nth-child(7)').text().trim() === "尚未回覆") {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            } else if (selectedValue === "answered") {
+                $('.table-container table tbody tr').each(function () {
+                    if ($(this).find('td:nth-child(7)').text().trim() === "已回覆") {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            } else {
+                $('.table-container table tbody tr').show();
+            }
+        });
+    });
+</script>

@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "member";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "member";
+}
+@model project_ver1.Models.LoginViewModel;
+<style>
+    .loginbox {
+        width: 48%;
+        padding: 103px;
+        border-radius: 8px;
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        margin: 0 auto;
+        background-color: rgb(249, 248, 248);
+        box-shadow: 6px 6px 6px 2px gray;
+    }
+
+    input[type="email"], input[type="password"] {
+        font-size: 22px;
+        width: 143%;
+        padding: 10px 8px;
+        border: 2px solid lightgray;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    button[type="submit"] {
+        border: none;
+        background-color: orange;
+        padding: 5px;
+        width: 70%;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+        button[type="submit"]:hover {
+            background-color: rgb(240, 160, 13);
+        }
+
+    .loginbox h3 span {
+        display: block;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #3e3d3d;
+        font-weight: 200;
+    }
+
+    .b-join {
+        border: none;
+        background-color: lightgray;
+        padding: 5px;
+        width: 70%;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .mt-3 {
+        margin-top: 3rem; 
+
+    .forgot-password-link {
+        color: #1B813E; 
+        font-weight: bold; 
+        text-decoration: none; 
+        font-size: 1.5em;
+    }
+
+        .forgot-password-link:hover {
+            color: #7BA23F; 
+            text-decoration: none;
+        }
+
+
+</style>
+<div class="container-md">
+    <h2 class="text-success  text-center">會員專區</h2>
+    <div class="loginbox">
+        <h3>會員登入<span>SIGN IN</span></h3>
+
+        <h5 style="color:red">@ViewBag.ErrorMessage</h5>
+        <form asp-action="Member" method="post" id="loginForm" name="loginForm" class="login-form">
+            <fieldset>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="input-group mb-3">
+                    <label for="Email" class="input-group-text">帳號</label>
+                    <input asp-for="Email" class="form-control" placeholder="請輸入您的e-mail信箱" aria-label="Email" aria-describedby="basic-addon1" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <label for="Password" class="input-group-text">密碼</label>
+                    <input asp-for="Password" type="password" class="form-control" placeholder="輸入8-20個字元內的密碼" aria-label="Password" aria-describedby="basic-addon2" />
+                </div>
+                <div class="text-center mt-3">
+                    <a href="@Url.Action("ForgotPassword", "Home")" class="forgot-password-link">忘記密碼</a>
+                </div>
+                <div class="d-grid col-10 mx-auto">
+                    <button class="btn btn-login clearfix" type="submit">會員登入</button>
+                    <a class=" btn btn-secondary  b-join" asp-action="Members_join">加入會員</a>
+                </div>
+               
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+

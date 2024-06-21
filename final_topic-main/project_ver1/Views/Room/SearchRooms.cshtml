@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "SearchRooms";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<project_ver1.Models.Rooms>
+
+@if (Model != null && Model.Count > 0)
+{
+    <h2>Search Results</h2>
+    <p>Number of available rooms: @ViewBag.AvailableRoomCount</p>
+
+    <div class="row">
+        @foreach (var room in Model)
+        {
+            <div class="col-md-4">
+                <div class="card room-card">
+                    <img src="booking1.jpg" class="card-img-top room-image" alt="Room 1">
+                    <div class="card-body">
+                        <h5 class="card-title">@room.Category.Name</h5>
+                        <p class="card-text">Price: @room.Price</p>
+                        <p class="card-text">Discount: @room.Discount</p>
+                        <p class="card-text">Status: @(room.HasReserved ? "Reserved" : "Available")</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No available rooms found.</p>
+}
+
+

@@ -1,0 +1,133 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Backstage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Backstage";
+}
+
+
+
+<style>
+
+
+    .mb-box {
+        width: 55%;
+        padding: 120px;
+        border-radius: 15px;
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        margin: 0 auto;
+        background-color: rgba(222, 237, 240, 0.953);
+        box-shadow: 6px 6px 6px 2px gray;
+    }
+
+    .logout {
+        text-decoration: none;
+        border: none;
+        background-color: rgba(255, 0, 0, 0.87);
+        padding: 5px;
+        width: 35%;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .order {
+        position: relative;
+        top: -150px;
+        left: 40px;
+        text-decoration: none;
+        border: none;
+        padding: 5px;
+        width: 15%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        color: whitesmoke;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+        .order:hover {
+            background-color: gray;
+        }
+
+    .logout {
+        text-decoration: none;
+        border: none;
+        background-color: rgba(255, 0, 0, 0.87);
+        padding: 5px;
+        width: 35%;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .order_F {
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        padding: 5px;
+    }
+
+    .order_R {
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        padding: 5px;
+    }
+
+    .T-title:hover {
+        background-color: black;
+    }
+
+    .btn-custom {
+        background-color: #1B813E;
+        border-color: #1B813E;
+    }
+
+        .btn-custom:hover {
+            background-color: #7BA23F;
+            border-color: #7BA23F;
+        }
+
+    .sidebar {
+        width: 250px;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        height: 400px;
+        background-color: #f8f9fa;
+        border-right: 1px solid #dee2e6;
+        padding-top: 20px;
+    }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+        }
+
+            .sidebar a:hover {
+                background-color: #ddd;
+            }
+
+</style>
+
+<div class="container-md">
+  <div class="sidebar">
+        <a href="@Url.Action("Backstage", "Home")">員工主頁</a>
+        <a href="@Url.Action("BackstageContact", "Home")">顧客問題</a>
+    <a href="@Url.Action("Index", "Home")">產品訂單</a>
+    <a href="@Url.Action("News", "Home")">訂房訂單</a>
+    <a href="@Url.Action("Index", "Home")">會員資料管理</a>
+    <br />
+    <br />
+        <form id="logoutForm" asp-action="Logout" asp-controller="Home" method="post">
+            <button type="submit" class="logout btn  btn-danger">登出</button>
+        </form>
+    
+</div>
+    <h1>員工主頁</h1>

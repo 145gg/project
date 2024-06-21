@@ -1,0 +1,192 @@
+﻿@model List<project_ver1.Models.News>
+
+@{
+    ViewData["Title"] = "News";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "News";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .newcontainer {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .news-newcontainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .news-block {
+            width: calc(30% - 10px);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: border 0.1s;
+            cursor: pointer;
+        }
+
+            .news-block:hover {
+                border: 2px solid #007bff;
+            }
+
+            .news-block img {
+                max-width: 100%;
+                height: 180px;
+                display: block;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+
+        .btn-newcontainer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .myform {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 20px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 0 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: green;
+            color: white;
+        }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+            .btn.active {
+                background-color: #0056b3;
+            }
+
+        .fixed {
+            width: 200px; /* 300 */
+            height: 150px; /* 200 */
+            object-fit: cover;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="newcontainer">
+        <div class="btn-newcontainer">
+            <div style="display: inline-block; margin-right:30px;margin-top:50px;margin-bottom:30px;">
+                <form method="post" class="myform">
+                    <input type="hidden" name="CategoryID" value="1" />
+                    <button type="submit" class="btn">活動公告</button>
+                </form>
+            </div>
+            <div style="display: inline-block;margin-top:50px;margin-bottom:50px;">
+                <form method="post" class="myform">
+                    <input type="hidden" name="CategoryID" value="2" />
+                    <button type="submit" class="btn">住宿優惠</button>
+                </form>
+            </div>
+        </div>
+        <div class="news-newcontainer">
+            @foreach (var news in Model)
+            {
+                <div class="news-block" onclick="showModal('@news.NewsTitle', '@news.SetTime', '@news.NewsContent')">
+                    @if (!string.IsNullOrEmpty(news.Image))
+                    {
+                        <img src="@Url.Content(news.Image)" alt="News Image" class="fixed" />
+                    }
+                    <h2>@news.NewsTitle</h2>
+                    <h6 style="color:black">@news.SetTime</h6>
+                    <p>@news.NewsContent</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <h6 style="color:black" id="modalTime"></h6>
+            <p id="modalContent"></p>
+        </div>
+    </div>
+
+    <script>
+        function showModal(title, time, content) {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalTime").innerText = time;
+            document.getElementById("modalContent").innerText = content;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("myModal")) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

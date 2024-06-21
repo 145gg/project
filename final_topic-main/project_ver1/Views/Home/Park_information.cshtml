@@ -1,0 +1,150 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Park_information";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Park_information";
+}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    .tea {
+        color: #2E8B57;
+    }
+
+    /* 更改圖片大小 */
+    swiper-container {
+        width: 80%;
+        height: 80%;
+    }
+
+    swiper-slide {
+        text-align: center;
+        font-size: 20px;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+
+    .content:hover {
+        background-color: #95d07f;
+        color: black;
+        transition: transform 0.2s ease;
+        transform: scale(1.1);
+        box-shadow: 5px 6px 6px 4px gray;
+    }
+
+    .card {
+        background-color: #d3f9bcfa;
+        box-shadow: 7px 6px 6px 5px lightgray;
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        border-radius: 15px;
+    }
+
+    .p {
+        color: black;
+    }
+</style>
+<div class="container-md">
+    <div>
+        <h3 class="text-center">園區導覽資訊</h3>
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+                          centered-slides="true" autoplay-delay="7000" autoplay-disable-on-interaction="false">
+            <swiper-slide><img src="~/image/fruit_tree.jpg"></swiper-slide>
+            <swiper-slide><img src="~/image/tea_garden04.png"></swiper-slide>
+            <swiper-slide><img src="~/image/fruit_tea.jpg"></swiper-slide>
+            <swiper-slide><img src="~/image/fruit_tree3.jpg"></swiper-slide>
+            <swiper-slide><img src="~/image/mango.jpg"></swiper-slide>
+            <swiper-slide><img src="~/image/mix_ice.jpg"></swiper-slide>
+        </swiper-container>
+        <br />
+        <hr>
+        <div class="content card col-md-12" style="max-height:1000px">
+            <div class="row g-2">
+                <div class="col-md-4">
+                    <img class="img-fluid rounded" src="~/image/Juice.jpg" alt="" />
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h3 class="card-title">現榨果茶</h3>
+                        <h5 class="card-text">我們果園是採用天然有機的種植方法,放棄人為加工的人工有機栽種，讓水果在自然而然的環境中生長。另一方面透過生態教育，向一般大眾傳遞對水果的熱愛。在這裡可以喝到現榨的新鮮果茶，若是夏天的夜晚，還可以看得見點點螢光，絕對讓每一個到此一遊的人不虛此行！也可以在現場直接購買水果伴手禮以及各種水果茶飲。</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* <div class="row g-2">
+        <div class="content card   col-md-10 ">
+        <h4 class="text-center tea">現榨果茶</h4>
+        <p class="fs-4 text-center">
+        我們果園是採用天然有機的種植方法,放棄人為加工的人工有機栽種，讓水果在自然而然的環境中生長。另一方面透過生態教育，向一般大眾傳遞對水果的熱愛。在這裡可以喝到現榨的新鮮果茶，若是夏天的夜晚，還可以看得見點點螢光，絕對讓每一個到此一遊的人不虛此行！也可以在現場直接購買水果伴手禮以及各種水果茶飲。
+        </p>
+        </div> *@
+    </div><hr /><br />
+    <div class="content card col-md-12" style="max-height:1000px">
+        <div class="row g-2">
+            <div class="col-md-4">
+                <img class="img-fluid rounded" src="~/image/trail-2.jpg" alt="" />
+            </div>
+            <div class="col-md-7">
+                <div class=" card-body">
+                    <h3 class="card-title">庄園步道</h3>
+                    <h5 class="card-text">很適合全家人一同出遊來走這個步道，步道難度適中大人小孩都可以一起健行運動還能沿途欣賞我們莊園的景色，也可以順便到我們果園裡走走，如果剛好是當季水果可以採收的季節還能親自採摘。</h5>
+
+                </div>
+            </div>
+        </div>
+    </div><br />
+    @* <div class="row g-2">
+    <div class="content card   col-md-11">
+    <h4 class="text-center">庄園步道</h4>
+    <img class="img-fluid mx-auto d-block " src="/image/trail-2.jpg" alt="">
+    <p class="fs-4 text-center">很適合全家人一同出遊來走這個步道，步道難度適中大人小孩都可以一起健行運動還能沿途欣賞我們莊園的景色，也可以順便到我們果園裡走走，如果剛好是當季水果可以採收的季節還能親自採摘。</p>
+    </div>
+    </div> *@
+    <hr />
+    <div class="content card col-md-12" style="max-width:1500px">
+        <div class="row g-2">
+            <div class="col-md-3">
+                <img class="img-fluid rounded" src="~/image/farm_menu.png" alt="">
+            </div>
+            <div class="col-md-9">
+                <div class="card-body">
+                    <h3 class="card-title ">庄園餐館</h3>
+                    <h5 class="card-text">庄園餐館主要是提供沙拉套餐、甜點以及各種茶飲為主，可現場訂位或電話訂位。</h5>
+                    <h5 class="card-text">菜單如圖:</h5>
+                    <h5 class="card-text">訂位電話:<a href="tel:+886-6-5760121">065760121</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* <div class="row g-2">
+    <div class="content card text-black btn-outline-dark col-md-8">
+    <h3 class="text-center">餐廳資訊</h3>
+    <h4 class="text-center">庄園餐館</h4>
+    <p class="fs-5 text-center">庄園餐館主要是套餐、甜點以及各種茶飲為主，如需要在此用餐可現場等候訂位或電話預約訂位</p>
+    <p class="fs-5 text-center">菜單如下:</p>
+    <img class="rounded mx-auto d-block" src="/image/Farm_menu2.png" alt="">
+    <p class="fs-5 text-center">預約電話:<a href="tel:+886-975-969-521">0975969521</a></p>
+    </div>
+    </div> *@
+
+
+</div>
+</div>
+
+
+

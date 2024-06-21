@@ -1,0 +1,91 @@
+﻿@{
+
+    ViewData["Title"] = "商品詳細";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "商品詳細";
+}
+
+<div class="container-fluid" style="padding-left: 300px; padding-right:300px;">
+    <br />
+    <br />
+    <div class="panel panel-default">
+
+        <div class="panel-body row">
+            @* here *@
+            <div class="col-sm-3 col-md-6" style="color:blue">
+
+                @if (!string.IsNullOrEmpty(Model.Image))
+                {
+                    <img src="@Url.Content(Model.Image)" alt="News Image" width="500" height="500" />
+                }
+
+
+
+            </div>
+
+            <div class="col-sm-9 col-md-6">
+                <h1 style="color:#42602D;"><b>@Model.Name</b></h1>
+                <br />
+                <h4><b>產品特色:</b></h4>
+                <h5>@Model.Features</h5><br />
+                <h4><b>產品描述:</b></h4>
+                <h5>@Model.Description</h5><br />
+                <h4><b>產地:</b></h4>
+                <h4>@Model.Made</h4><br />
+
+                <h4><b>單價:<span style="color:red;">NT$@Model.Price</span></b></h4><br />
+
+
+
+                <div>
+                    <form action="@Url.Action("ShoppingCart", "Product")" method="post">
+                        <label for="Count">選擇數量:</label>
+                        <input type="number" name="Count" value="1" min="1" max="10" />
+                        <input type="hidden" name="ProductID" value="@Model.ID" />
+                        <input type="hidden" name="Price" value="@Model.Price" />
+                        <button type="submit" class="btn btn-success"> 加到購物車 </button>
+                    </form>
+                </div><br />
+                <div>
+                    <a href="@Url.Action("Index", "Product")" class="btn btn-info btn-lg" style="margin-left:60px">
+                        <span class="glyphicon glyphicon-eye-open"></span>購買其他商品
+                    </a>
+                </div>
+                <br />
+
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+</div>
+<script>
+    sessionStorage.setItem("CategoryDropdown_Value", "0");
+</script>
+@* <script>
+    $(document).ready(function () {
+        $('[id^="addToCartBtn_"]').click(function (e) {
+            e.preventDefault();
+            var productId = $(this).attr('id').split('_')[1];
+            var quantity = $("#quantity_" + productId).val();
+            var productName = $(this).closest('.panel').find('.panel-heading').text();
+            var productUrl = $(this).closest('.panel').find('img').attr('src').replace('/lib/Images/', '');
+            var productFeatures = $(this).closest('.panel').find('h6').eq(1).text();
+            var productMade = $(this).closest('.panel').find('h4').text();
+            var productDelivery = $(this).closest('.panel').find('h6').eq(2).text();
+            var productPrice = $(this).closest('.panel').find('h6').eq(3).text();
+
+            var url = "@Url.Action("Add", "AddToCart")" +
+                "?id=" + productId +
+                "&quantity=" + quantity +
+                "&name=" + encodeURIComponent(productName) +
+                "&url=" + encodeURIComponent(productUrl) +
+                "&features=" + encodeURIComponent(productFeatures) +
+                "&made=" + encodeURIComponent(productMade) +
+                "&delivery=" + encodeURIComponent(productDelivery) +
+                "&price=" + encodeURIComponent(productPrice);
+
+            window.location.href = url;
+        });
+    });
+</script> *@

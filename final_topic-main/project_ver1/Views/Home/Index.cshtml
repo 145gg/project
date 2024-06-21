@@ -1,0 +1,163 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "果茶庄園休閒農場";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">歡迎來到果茶庄園休閒農場</h1>
+    <div class="row mt-4">
+        <div class="col-md-6 col-sm-12 mb-3">
+            <div class="card h-100 shadow-sm hover-effect">
+                <img src="~/Image/index01.jpg" class="card-img-top" alt="果茶庄園的美麗景色" style="height: 400px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">農場簡介</h5>
+                    <p class="card-text">果茶庄園休閒農場是一個美麗的農場，提供多種新鮮的農產品和令人愉悅的休閒活動。</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 mb-3">
+            <div class="card h-100 shadow-sm hover-effect">
+                <img src="~/Image/index03.jpg" class="card-img-top" alt="多種新鮮的水果和蔬菜" style="height: 400px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">農產品簡介</h5>
+                    <p class="card-text">我們的農場提供多種新鮮的水果和茶葉，讓您享受自然的美味。果茶庄園以其豐富多樣的農產品而聞名，提供新鮮美味的水果和優質的茶葉。</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 mb-3">
+            <div class="card h-100 shadow-sm hover-effect">
+                <img src="~/Image/index02.jpg" class="card-img-top" alt="有趣的活動，如摘水果和農場遊覽" style="height: 400px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">步道簡介</h5>
+                    <p class="card-text">果茶庄園步道位於山明水秀的鄉間，為遊客提供一個探索自然美景和享受新鮮空氣的理想場所</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 mb-3">
+            <div class="card h-100 shadow-sm hover-effect">
+                <img src="~/image/booking2.jpg" class="card-img-top" alt="美麗的自然風光和清新的空氣" style="height: 400px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">房間簡介</h5>
+                    <p class="card-text">歡迎來到果茶庄園休閒農場的溫馨客房，這裡是您遠離都市喧囂、享受寧靜自然的理想之地。我們的客房融合了現代舒適與鄉村風情。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button onclick="topFunction()" id="backToTopBtn" title="返回頂部" class="btn btn-primary">至頂</button>
+
+<script>
+    (function () {
+        window.onscroll = function () {
+            scrollFunction();
+            fadeInElements();
+        };
+
+        function scrollFunction() {
+            const backToTopBtn = document.getElementById("backToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+                backToTopBtn.style.opacity = "1";
+            } else {
+                backToTopBtn.style.opacity = "0";
+                setTimeout(function () { backToTopBtn.style.display = "none"; }, 300);
+            }
+        }
+
+        window.topFunction = function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function fadeInElements() {
+            const fadeIns = document.querySelectorAll('.fade-in');
+            const windowHeight = window.innerHeight;
+            const elementVisible = 150;
+
+            fadeIns.forEach(fadeIn => {
+                const elementTop = fadeIn.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    fadeIn.classList.add('active');
+                } else {
+                    fadeIn.classList.remove('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', function () {
+            const cardBodies = document.querySelectorAll('.card-body');
+            const windowHeight = window.innerHeight;
+            const elementVisible = 150;
+
+            cardBodies.forEach(cardBody => {
+                const cardTop = cardBody.getBoundingClientRect().top;
+                if (cardTop < windowHeight - elementVisible) {
+                    cardBody.style.opacity = "1";
+                } else {
+                    cardBody.style.opacity = "0";
+                }
+            });
+        });
+    })();
+</script>
+
+<style>
+    .fade-in {
+        opacity: 0;
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    .hover-effect:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+    #backToTopBtn {
+        opacity: 0;
+        transition: opacity 0.3s, visibility 0.3s;
+        visibility: hidden;
+        background-color: orange;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 12px;
+        border: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+
+        #backToTopBtn[style*="display: block;"] {
+            visibility: visible;
+        }
+
+    /* 新增的樣式 */
+    .card-body {
+        opacity: 0; /* 初始設置為透明 */
+        transition: opacity 0.3s;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9); /* 白色半透明背景 */
+        padding: 20px;
+        color: black; /* 文字顏色 */
+        border-radius: 5px; /* 圓角邊框 */
+        position: absolute; /* 使文字外框層在圖片上 */
+        bottom: 0; /* 使文字外框位於圖片下方 */
+        left: 0;
+        right: 0;
+    }
+
+    .hover-effect:hover .card-body {
+        opacity: 1; /* 滑鼠懸停時顯示 */
+    }
+</style>

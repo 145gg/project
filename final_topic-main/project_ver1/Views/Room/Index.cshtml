@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<div class="container">
+    <h1 class="mt-4 mb-4">訂房</h1>
+
+
+    <div class="form-group">
+        <label for="roomType">選擇房間類別：</label>
+        <select class="form-control" id="roomType">
+            <option value="1">一人房</option>
+            <option value="2">雙人房</option>
+            <option value="3">三人房</option>
+            <option value="4">四人房</option>
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="checkInDate">入住日期：</label>
+        <input type="date" class="form-control" id="checkInDate" onchange="updateCheckOutDate()">
+    </div>
+
+    <div class="form-group">
+        <label for="checkOutDate">退房日期：</label>
+        <input type="date" class="form-control" id="checkOutDate">
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="searchRooms()">搜尋房間</button>
+    <form id="form" name="form" method="POST" action="https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5">
+        <!--step2 : 收到後端的值印出來-->
+        @foreach (var key in @Model.Keys.ToList())
+        {
+            @(key) <input type="text" name="@key" value="@Model[key]" />
+
+            <br />
+        }
+        <button type="submit" id="checkoutBtn">送出</button>
+    </form>
+    <div id="searchResults" class="mt-4"></div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function updateCheckOutDate() {
+        var checkInDate = document.getElementById('checkInDate').value;
+        var checkOutDate = document.getElementById('checkOutDate');
+        checkOutDate.min = checkInDate;
+    }
+
+    function searchRooms() {
+        var roomType = $('#roomType').val();
+        var checkInDate = $('#checkInDate').val();
+        var checkOutDate = $('#checkOutDate').val();
+
+        $.ajax({
+            url: '@Url.Action("SearchRooms", "Room")',
+            type: 'POST',
+            data: {
+                roomType: roomType,
+                checkInDate: checkInDate,
+                checkOutDate: checkOutDate
+            },
+            success: function (data) {
+                $('#searchResults').html(data);
+            },
+            error: function (xhr, status, error) {
+                console.error(error);
+            }
+        });
+    }
+    $("#checkoutBtn").on('click', (e) => {
+        //e.preventDefault(); //因為送出就跳轉到綠界，這個可以停住確認自己的console.log的內容
+        let formData = $("#form").serializeArray();
+        var json = {};
+        $.each(formData, function () {
+            json[this.name] = this.value || "";
+        });
+        console.log(json);
+        //step3 : 新增訂單到資料庫
+        $.ajax({
+            type: 'POST',
+            url: 'https://localhost:44325/api/Ecpay/AddOrders',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(json),
+            success: function (res) {
+                console.log(res);
+            },
+            error: function (err) { console.log(err); },
+        });
+    });
+</script>
+
+

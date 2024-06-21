@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "購物車";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "購物車";
+    var counts = ViewBag.Product_Count as List<int>;
+    var prices = ViewBag.Product_Price as List<int>;
+}
+<style>
+    .order_F {
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        padding: 5px;
+    }
+
+    .order_R {
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        padding: 5px;
+    }
+
+    .T-title:hover {
+        background-color: black;
+    }
+
+    .btn-center {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn-primary {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
+
+    .go-to-product {
+        position: absolute;
+        top: 120px;
+        right: 150px;
+        z-index: 9999;
+    }
+
+</style>
+
+<div class="container-md">
+
+    <br />
+    <h1><strong>購買清單</strong></h1>
+    <br />
+    <table class="table table-hover order_F" style="background-color:white;">
+        <thead class="table table-dark T-title">
+            <tr>
+                <th scope="col">欄位</th>
+                <th scope="col">商品圖片</th>
+                <th scope="col">商品名稱</th>
+                <th scope="col">商品數量</th>
+                <th scope="col">商品單價</th>
+                <th scope="col">總價</th>
+                <th scope="col">刪除</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 0;
+                bool hasItems = counts != null && counts.Count > 0;
+            }
+            @if (hasItems)
+            {
+                foreach (var product in Model)
+                {
+                    <tr>
+                        <th scope="row">@(i + 1)</th>
+                        <td><img src="@Url.Content(@product.Image)" alt="News Image" width="100px" height="100px" /></td>
+                        <td>@product.Name</td>
+                        <td>@counts[i]</td>
+                        <td>@prices[i]</td>
+                        <td>@(@prices[i] * @counts[i])</td>
+                        @{
+                            i++;
+                        }
+                        <td>
+                            <form method="post" action="@Url.Action("ShoppingCart")">
+                                <input type="hidden" name="productId" value="@product.ID" />
+                                <input type="hidden" name="action" value="delete" />
+                                <button type="submit" class="btn btn-danger">刪除</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" style="font-size: 2rem; text-align: center; font-weight: bold;">購物車內沒有商品</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<br />
+<br />
+
+<div class="btn-center">
+    @if (hasItems)
+    {
+        <form id="purchaseForm" method="post" action="@Url.Action("SaveToDatabase")">
+            <button type="submit" class="btn btn-primary" onclick="confirmPurchase()">確定購買</button>
+        </form>
+    }
+</div>
+<div>
+    <a href="@Url.Action("Index", "Product")" class="btn btn-info btn-lg go-to-product">
+        <span class="glyphicon glyphicon-eye-open"></span>前往選購其他商品
+    </a>
+</div>
+
+<script>
+    function confirmPurchase() {
+        if (confirm('購買成功，訂單已送出')) {
+            document.getElementById('purchaseForm').submit();
+            window.location.href = '@Url.Action("Index", "Product")';
+        }
+    }
+</script>

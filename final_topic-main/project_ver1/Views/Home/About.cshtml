@@ -1,0 +1,66 @@
+﻿
+@{
+
+    ViewData["Title"] = "about";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "about";
+}
+
+<script>
+    /* 限制字數 */
+    document.addEventListener('DOMContentLoaded', function () {
+        var textarea = document.getElementById('message');
+        var charCount = document.getElementById('charCount');
+        var maxLength = 200;
+
+        textarea.addEventListener('input', function () {
+            var currentLength = textarea.value.length;
+            charCount.textContent = currentLength + '/' + maxLength;
+
+            if (currentLength > maxLength) {
+                textarea.value = textarea.value.substring(0, maxLength);
+                charCount.textContent = maxLength + '/' + maxLength;
+            }
+        });
+    });
+</script>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="text-center mb-4">聯絡我們</h1>
+            <form form action="/Home/About" method="post">
+                <label >問題分類</label>
+                <select name="QuestionCategory" id="group" value="1">
+                    <option value="建議與意見">建議與意見</option>
+                    <option value="餐飲業合作">餐飲業合作</option>
+                    <option value="市場合作">市場合作</option>
+                    <option value="其他">其他</option>
+
+                </select>
+                <label>性別</label>
+                <select name="sex" id="group" value="1">
+                    <option value="1">男</option>
+                    <option value="0">女</option>
+                </select>
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="先生or小姐">
+                </div>
+                <div class="form-group">
+                    <label for="email">輸入信箱</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="請輸入您的email">
+                </div>
+                <div class="form-group">
+                    <label for="email">輸入電話</label>
+                    <input type="phone" name="phone" class="form-control" id="phone" placeholder="請輸入您的電話">
+                </div>
+                <div class="form-group">
+                    <label for="message">提出問題</label>
+                    <textarea class="form-control" name="questionContent" id="message" rows="3" placeholder="請輸入您的留言"></textarea>
+					<!-- <div id="charCount" class="text-muted">0/200</div>-->
+                </div>
+                <button type="submit" class="btn btn-primary ">確認送出</button>
+            </form>
+        </div>
+    </div>
+</div>

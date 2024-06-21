@@ -1,0 +1,192 @@
+﻿
+@using System.Linq;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Order";
+}
+
+<style>
+    .order_F {
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        padding: 5px;
+    }
+
+    .order_R {
+        border: 2px solid hsla(0, 0%, 85%, 1);
+        padding: 5px;
+    }
+    .T-title:hover{
+        background-color:black;
+    }
+
+</style>
+
+<div class="container-md">
+    <h3 class="text-center text-success">農產品訂單</h3>
+    <table class="table table-hover order_F" style="background-color:white;">
+        <thead class="table table-dark T-title">
+            <tr>
+                <th>訂單編號</th>
+                <th>產品名稱</th>
+                <th>購買數量</th>
+                <th>單價</th>
+                <th>折扣</th>
+                <th>訂單成立時間</th>
+                <th>訂單總金額</th>
+                <th>訂單狀態</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var AgriculturalOrderModels in Model.AgriculturalOrders)
+            {
+                <tr>
+                    <td>@AgriculturalOrderModels.Order.ID</td>
+                  
+                    <td>
+
+                        @foreach (var product in AgriculturalOrderModels.Products)
+                        {
+                            <p>     
+                                 @product.Name
+                            </p>
+                        }
+                    </td>
+                    <td>
+
+                        @foreach (var orderDetail in AgriculturalOrderModels.OrderDetails)
+                        {
+                            <p>
+                                @orderDetail.Count
+                                
+                            </p>
+                        }
+                    </td>
+                    <td>
+                        @foreach (var product in AgriculturalOrderModels.Products)
+                        {
+                            <p>    
+                                NT$@product.Price
+                            </p>
+                        }
+                    </td>
+                    <td>
+                        @foreach (var product in AgriculturalOrderModels.Products)
+                        {
+                            <p>
+                                @product.Discount
+
+                            </p>
+                        }
+
+                    </td>
+
+                    <td>
+
+                        <p>
+                            @AgriculturalOrderModels.Order.OderTime
+                        </p>
+
+                    </td>
+                    <td>
+
+                        <p>
+                            NT$@AgriculturalOrderModels.Order.SumPrice
+                        </p>
+
+                    </td>
+                    <td>
+
+                        <p class="@(@AgriculturalOrderModels.Order.OrderFinished ? "text-success" : "text-danger")">
+                            @(@AgriculturalOrderModels.Order.OrderFinished ? "已完成" : "未完成")
+                        </p>
+                    
+                    </td>
+
+                    
+                </tr>
+
+            }
+
+        </tbody>
+
+     
+        
+    </table><br /><br /><hr /><br /><br /><br />
+    <h3 class="text-center">訂房紀錄</h3>
+    <table class="table table-hover order_R" style="background-color:white;">
+        <thead class=" table table-dark">
+            <tr>
+                <th>訂房編號</th>
+                <th>房型</th>
+                <th>價格</th>
+                <th>折扣</th>
+                <th>訂單總金額</th>
+                <th>入住時間</th>
+                <th>退房時間</th>
+                <th>訂單狀態</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var RoomOrderModels in Model.RoomOrders)
+            {
+                <tr>
+                    <td>
+                        <p>@RoomOrderModels.RoomOrder.ID</p>
+                    </td>
+                    <td>
+
+                        @foreach (var category in RoomOrderModels.RoomCategory)
+                        {
+                            <p>
+                                @category.Name
+                            </p>
+                        }
+                    </td>
+                    <td>
+
+                        @foreach (var rooms in RoomOrderModels.Rooms)
+                        {
+                            <p>
+                                NT$@rooms.Price
+                            </p>
+                        }
+                    </td>
+                    <td>
+
+                        @foreach (var rooms in RoomOrderModels.Rooms)
+                        {
+                            <p>
+                               @rooms.Discount
+                            </p>
+                        }
+                    </td>
+                    <td>
+                        <p>NT$@RoomOrderModels.RoomOrder.SumPrice</p>
+                    </td>
+                    <td>
+                        <p>@RoomOrderModels.RoomOrder.CheckIn</p>
+                    </td>
+                    <td>
+                        <p>@RoomOrderModels.RoomOrder.CheckOut</p>
+
+                    </td>
+                    <td>
+                        <p class="@(@RoomOrderModels.RoomOrder.OrderFinished ? "text-success" : "text-danger")">
+                            @(@RoomOrderModels.RoomOrder.OrderFinished ? "已完成" : "未完成")
+                        </p>
+                    </td>
+                </tr>
+
+            }
+
+        </tbody>
+
+    </table>
+
+
+</div>
+

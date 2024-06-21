@@ -1,0 +1,425 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\project_ver1.bundle.scp.css",
+      "PackagePath": "staticwebassets\\project_ver1.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\01.jpg",
+      "PackagePath": "staticwebassets\\image\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\02.jpg",
+      "PackagePath": "staticwebassets\\image\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\03.jpg",
+      "PackagePath": "staticwebassets\\image\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\04.jpg",
+      "PackagePath": "staticwebassets\\image\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\Juice.jpg",
+      "PackagePath": "staticwebassets\\image\\Juice.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\apple.jpg",
+      "PackagePath": "staticwebassets\\image\\apple.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\booking1.jpg",
+      "PackagePath": "staticwebassets\\image\\booking1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\booking2.jpg",
+      "PackagePath": "staticwebassets\\image\\booking2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\booking3.jpg",
+      "PackagePath": "staticwebassets\\image\\booking3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\booking4.jpg",
+      "PackagePath": "staticwebassets\\image\\booking4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\farm_menu.png",
+      "PackagePath": "staticwebassets\\image\\farm_menu.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\fruit_tea.jpg",
+      "PackagePath": "staticwebassets\\image\\fruit_tea.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\fruit_tree.jpg",
+      "PackagePath": "staticwebassets\\image\\fruit_tree.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\fruit_tree3.jpg",
+      "PackagePath": "staticwebassets\\image\\fruit_tree3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\guava.jpg",
+      "PackagePath": "staticwebassets\\image\\guava.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\index01.jpg",
+      "PackagePath": "staticwebassets\\image\\index01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\index02.jpg",
+      "PackagePath": "staticwebassets\\image\\index02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\index03.jpg",
+      "PackagePath": "staticwebassets\\image\\index03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\index_04.jpg",
+      "PackagePath": "staticwebassets\\image\\index_04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\lemon.jpg",
+      "PackagePath": "staticwebassets\\image\\lemon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\logo.jpg",
+      "PackagePath": "staticwebassets\\image\\logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\logo2.png",
+      "PackagePath": "staticwebassets\\image\\logo2.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\mango.jpg",
+      "PackagePath": "staticwebassets\\image\\mango.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\mix_ice.jpg",
+      "PackagePath": "staticwebassets\\image\\mix_ice.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\news1.jpg",
+      "PackagePath": "staticwebassets\\image\\news1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\news2.jpg",
+      "PackagePath": "staticwebassets\\image\\news2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\news3.jpg",
+      "PackagePath": "staticwebassets\\image\\news3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\news4.jpg",
+      "PackagePath": "staticwebassets\\image\\news4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\news5.jpg",
+      "PackagePath": "staticwebassets\\image\\news5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\news6.jpg",
+      "PackagePath": "staticwebassets\\image\\news6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\news7.jpg",
+      "PackagePath": "staticwebassets\\image\\news7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\passionfruit.jpg",
+      "PackagePath": "staticwebassets\\image\\passionfruit.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\pineapple.jpg",
+      "PackagePath": "staticwebassets\\image\\pineapple.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\shopping.jpg",
+      "PackagePath": "staticwebassets\\image\\shopping.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\tea1.jpg",
+      "PackagePath": "staticwebassets\\image\\tea1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\tea2.jpg",
+      "PackagePath": "staticwebassets\\image\\tea2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\tea3.jpg",
+      "PackagePath": "staticwebassets\\image\\tea3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\tea_garden04.png",
+      "PackagePath": "staticwebassets\\image\\tea_garden04.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\trail-2.jpg",
+      "PackagePath": "staticwebassets\\image\\trail-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\image\\waxapple.jpg",
+      "PackagePath": "staticwebassets\\image\\waxapple.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Downloads\\final_topic-main\\final_topic-main\\project_ver1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.project_ver1.props",
+      "PackagePath": "build\\project_ver1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.project_ver1.props",
+      "PackagePath": "buildMultiTargeting\\project_ver1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.project_ver1.props",
+      "PackagePath": "buildTransitive\\project_ver1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project_ver1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
